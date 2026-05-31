@@ -1,0 +1,13 @@
+{
+  "name": "gateway-swarm-crawler",
+  "version": "1.0.0",
+  "description": "Autonomous extraction engine for legacy Moteefe storefronts",
+  "main": "parallel_swarm.js",
+  "scripts": {
+    "start": "node parallel_swarm.js"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0",
+    "sharp": "^0.33.4"
+  }
+}

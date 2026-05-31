@@ -1,0 +1,132 @@
+[
+  {
+    "mainCategory": "All",
+    "mainSlug": "all",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/all",
+    "subCategories": [
+      {
+        "name": "All",
+        "url": "https://theoldgrumpyclub.com/p/all",
+        "slug": "all"
+      }
+    ]
+  },
+  {
+    "mainCategory": "The Old Grumpy Club ...",
+    "mainSlug": "all-old-grumpy-club-t-shirts-sweaters-hoodies",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/all-old-grumpy-club-t-shirts-sweaters-hoodies",
+    "subCategories": [
+      {
+        "name": "The Old Grumpy Club ...",
+        "url": "https://theoldgrumpyclub.com/p/all-old-grumpy-club-t-shirts-sweaters-hoodies",
+        "slug": "all-old-grumpy-club-t-shirts-sweaters-hoodies"
+      }
+    ]
+  },
+  {
+    "mainCategory": "All Apparel Designs",
+    "mainSlug": "all-grumpy-old-men-t-shirts-hoodies-and-sweaters",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/all-grumpy-old-men-t-shirts-hoodies-and-sweaters",
+    "subCategories": [
+      {
+        "name": "All Apparel Designs",
+        "url": "https://theoldgrumpyclub.com/p/all-grumpy-old-men-t-shirts-hoodies-and-sweaters",
+        "slug": "all-grumpy-old-men-t-shirts-hoodies-and-sweaters"
+      }
+    ]
+  },
+  {
+    "mainCategory": "Latest Arrivals",
+    "mainSlug": "latest-t-shirts-arrivals",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/latest-t-shirts-arrivals",
+    "subCategories": [
+      {
+        "name": "Latest Arrivals",
+        "url": "https://theoldgrumpyclub.com/p/latest-t-shirts-arrivals",
+        "slug": "latest-t-shirts-arrivals"
+      }
+    ]
+  },
+  {
+    "mainCategory": "Our Collections",
+    "mainSlug": "t-shirts-sweaters-hoodies-collections",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/t-shirts-sweaters-hoodies-collections",
+    "subCategories": [
+      {
+        "name": "Sarcastic Qoutes T Shirts",
+        "url": "https://theoldgrumpyclub.com/p/t-shirts-sweaters-hoodies-collections/sarcastic-qoutes-t-shirts",
+        "slug": "sarcastic-qoutes-t-shirts"
+      },
+      {
+        "name": "Retirement T Shirts Retired",
+        "url": "https://theoldgrumpyclub.com/p/t-shirts-sweaters-hoodies-collections/retirement-t-shirts-retired",
+        "slug": "retirement-t-shirts-retired"
+      },
+      {
+        "name": "Grumpy Old Riders",
+        "url": "https://theoldgrumpyclub.com/p/t-shirts-sweaters-hoodies-collections/grumpy-old-riders",
+        "slug": "grumpy-old-riders"
+      }
+    ]
+  },
+  {
+    "mainCategory": "Old Gits Rule - Grum...",
+    "mainSlug": "all-old-gits-rule-t-shirts-sweaters-hoodies",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/all-old-gits-rule-t-shirts-sweaters-hoodies",
+    "subCategories": [
+      {
+        "name": "Old Gits Rule - Grum...",
+        "url": "https://theoldgrumpyclub.com/p/all-old-gits-rule-t-shirts-sweaters-hoodies",
+        "slug": "all-old-gits-rule-t-shirts-sweaters-hoodies"
+      }
+    ]
+  },
+  {
+    "mainCategory": "Retro T",
+    "mainSlug": "retro-t-shirts-sweaters-hoodies-and-tops",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/retro-t-shirts-sweaters-hoodies-and-tops",
+    "subCategories": [
+      {
+        "name": "Retro T",
+        "url": "https://theoldgrumpyclub.com/p/retro-t-shirts-sweaters-hoodies-and-tops",
+        "slug": "retro-t-shirts-sweaters-hoodies-and-tops"
+      }
+    ]
+  },
+  {
+    "mainCategory": "Ugly Christmas Sweat...",
+    "mainSlug": "ugly-christmas-sweaters-grumpy-old-man-t-shirts",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/ugly-christmas-sweaters-grumpy-old-man-t-shirts",
+    "subCategories": [
+      {
+        "name": "Ugly Christmas Sweat...",
+        "url": "https://theoldgrumpyclub.com/p/ugly-christmas-sweaters-grumpy-old-man-t-shirts",
+        "slug": "ugly-christmas-sweaters-grumpy-old-man-t-shirts"
+      }
+    ]
+  },
+  {
+    "mainCategory": "Couple Shirts",
+    "mainSlug": "sweatshirts-for-couples",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/sweatshirts-for-couples",
+    "subCategories": [
+      {
+        "name": "Couple Shirts",
+        "url": "https://theoldgrumpyclub.com/p/sweatshirts-for-couples",
+        "slug": "sweatshirts-for-couples"
+      }
+    ]
+  },
+  {
+    "mainCategory": "The Old Grumpy Club Custom Apparel",
+    "mainSlug": "the-old-grumpy-club-custom-apparel",
+    "categoryUrl": "https://theoldgrumpyclub.com/p/the-old-grumpy-club-custom-apparel",
+    "subCategories": [
+      {
+        "name": "The Old Grumpy Club Custom Apparel",
+        "url": "https://theoldgrumpyclub.com/p/the-old-grumpy-club-custom-apparel",
+        "slug": "the-old-grumpy-club-custom-apparel"
+      }
+    ]
+  }
+]
