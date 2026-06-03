@@ -1,7 +1,19 @@
+require('dotenv').config();
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
+const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
+
+const s3 = new S3Client({
+  region: 'auto',
+  endpoint: process.env.R2_ENDPOINT,
+  credentials: {
+    accessKeyId: process.env.R2_ACCESS_KEY_ID,
+    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
+  },
+});
+const R2_BUCKET = process.env.R2_BUCKET_NAME || 'usegatewayai-mayzing-mockups';
 
 const manifestPath = path.join(__dirname, 'output', 'store_manifest.json');
 const fullManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
@@ -120,16 +132,31 @@ async function processCampaign(browser, campaignUrl, index) {
           const cleanColor = colorName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
           const actualIndex = startIndex + index;
           const filename = `c${actualIndex}-${cleanStyle}-${cleanColor}.webp`;
-          const filepath = path.join(outputDir, filename);
-          local_mockup = `/products/${filename}`;
           
-          if (!fs.existsSync(filepath)) {
-            try {
-              const response = await fetch(highResUrl);
-              const buffer = await response.arrayBuffer();
-              await sharp(Buffer.from(buffer)).webp({ quality: 80 }).toFile(filepath);
-              console.log(`[Worker ${index}] Downloaded ${filename}`);
-            } catch(e) {}
+          const campaignHostname = new URL(campaignUrl).hostname;
+          const storeSlug = campaignHostname.replace(/\./g, '_');
+          const s3Key = `${storeSlug}/${filename}`;
+          
+          // Use Cloudflare r2.dev domain for public access
+          // Assuming the user enables public access and gets an r2.dev URL (or custom domain)
+          const r2PublicDomain = process.env.R2_PUBLIC_DOMAIN || 'https://pub-abcdef12345.r2.dev'; // Replace with real URL later
+          local_mockup = `${r2PublicDomain}/${s3Key}`;
+          
+          try {
+            const response = await fetch(highResUrl);
+            const buffer = await response.arrayBuffer();
+            const webpBuffer = await sharp(Buffer.from(buffer)).webp({ quality: 80 }).toBuffer();
+            
+            await s3.send(new PutObjectCommand({
+              Bucket: R2_BUCKET,
+              Key: s3Key,
+              Body: webpBuffer,
+              ContentType: 'image/webp'
+            }));
+            
+            console.log(`[Worker ${index}] Uploaded ${s3Key} to R2`);
+          } catch(e) {
+             console.error(`[Worker ${index}] Failed to upload ${s3Key}:`, e.message);
           }
         }
         
@@ -174,7 +201,7 @@ async function processCampaign(browser, campaignUrl, index) {
 (async () => {
   console.log('===================================================');
   console.log('THE HIVE: Parallel Swarm Orchestrator Started');
-  console.log('Dispatching 13 autonomous headless browser threads...');
+  console.log('Dispatching chunk of 10 autonomous headless browser threads...');
   console.log('===================================================');
   
   const startTime = Date.now();
