@@ -48,25 +48,8 @@ jobs:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
         run: node parallel_swarm.js
         
-      - name: Upload Manifest & Assets
+      - name: Upload Chunk Manifest
         uses: actions/upload-artifact@v4
         with:
           name: full-store-extraction-chunk-${{ matrix.chunk }}
-          path: output/images/products/
-
-  aggregate:
-    needs: scrape
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download all chunk artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: all-products
-          pattern: full-store-extraction-chunk-*
-          merge-multiple: true
-
-      - name: Upload Master Zip
-        uses: actions/upload-artifact@v4
-        with:
-          name: FULL-STORE-MOCKUPS-MASTER
-          path: all-products/
+          path: output/parallel_swarm_manifest.json
