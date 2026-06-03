@@ -3,12 +3,18 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-// Dynamically ingest the first 13 campaigns from the master manifest
 const manifestPath = path.join(__dirname, 'output', 'store_manifest.json');
 const fullManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-const CAMPAIGNS = fullManifest.slice(0, 13).map(item => item.url);
 
-const outputDir = path.join(__dirname, 'output', 'images', 'parallel_test');
+// GitHub Actions Chunking Logic
+const CHUNK_INDEX = parseInt(process.env.CHUNK_INDEX || '0', 10);
+const ITEMS_PER_CHUNK = 10;
+const startIndex = CHUNK_INDEX * ITEMS_PER_CHUNK;
+const endIndex = Math.min(startIndex + ITEMS_PER_CHUNK, fullManifest.length);
+
+const CAMPAIGNS = fullManifest.slice(startIndex, endIndex).map(item => item.url);
+
+const outputDir = path.join(__dirname, 'output', 'images', 'products');
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
 async function processCampaign(browser, campaignUrl, index) {
@@ -112,9 +118,10 @@ async function processCampaign(browser, campaignUrl, index) {
           const highResUrl = mockupUrl.replace('w:500', 'w:1000');
           const cleanStyle = target.style.toLowerCase().replace(/[^a-z0-9]+/g, '-');
           const cleanColor = colorName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          const filename = `c${index}-${cleanStyle}-${cleanColor}.webp`;
+          const actualIndex = startIndex + index;
+          const filename = `c${actualIndex}-${cleanStyle}-${cleanColor}.webp`;
           const filepath = path.join(outputDir, filename);
-          local_mockup = `/images/parallel_test/${filename}`;
+          local_mockup = `/products/${filename}`;
           
           if (!fs.existsSync(filepath)) {
             try {

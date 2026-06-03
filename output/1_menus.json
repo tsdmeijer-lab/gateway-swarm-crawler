@@ -1,54 +1,237 @@
-[
-  {
-    "name": "All",
-    "slug": "all"
-  },
-  {
-    "name": "The Old Grumpy Club ...",
-    "slug": "all-old-grumpy-club-t-shirts-sweaters-hoodies"
-  },
-  {
-    "name": "All Apparel Designs",
-    "slug": "all-grumpy-old-men-t-shirts-hoodies-and-sweaters"
-  },
-  {
-    "name": "Latest Arrivals",
-    "slug": "latest-t-shirts-arrivals"
-  },
-  {
-    "name": "Our Collections",
-    "slug": "t-shirts-sweaters-hoodies-collections"
-  },
-  {
-    "name": "Old Gits Rule - Grum...",
-    "slug": "all-old-gits-rule-t-shirts-sweaters-hoodies"
-  },
-  {
-    "name": "Retro T",
-    "slug": "retro-t-shirts-sweaters-hoodies-and-tops"
-  },
-  {
-    "name": "Ugly Christmas Sweat...",
-    "slug": "ugly-christmas-sweaters-grumpy-old-man-t-shirts"
-  },
-  {
-    "name": "Couple Shirts",
-    "slug": "sweatshirts-for-couples"
-  },
-  {
-    "name": "The Old Grumpy Club Custom Apparel",
-    "slug": "the-old-grumpy-club-custom-apparel"
-  },
-  {
-    "name": "Privacy Policy",
-    "slug": "privacy"
-  },
-  {
-    "name": "Terms & conditions",
-    "slug": "terms"
-  },
-  {
-    "name": "Copyright & trademark policy",
-    "slug": "copyright"
-  }
-]
+{
+  "headerMenu": [
+    {
+      "name": "The Old Grumpy Club ...",
+      "slug": "all-old-grumpy-club-t-shirts-sweaters-hoodies",
+      "href": "/p/all-old-grumpy-club-t-shirts-sweaters-hoodies"
+    },
+    {
+      "name": "All Apparel Designs",
+      "slug": "all-grumpy-old-men-t-shirts-hoodies-and-sweaters",
+      "href": "/p/all-grumpy-old-men-t-shirts-hoodies-and-sweaters"
+    },
+    {
+      "name": "Latest Arrivals",
+      "slug": "latest-t-shirts-arrivals",
+      "href": "/p/latest-t-shirts-arrivals"
+    },
+    {
+      "name": "Our Collections",
+      "slug": "t-shirts-sweaters-hoodies-collections",
+      "href": "/p/t-shirts-sweaters-hoodies-collections"
+    },
+    {
+      "name": "Old Gits Rule - Grum...",
+      "slug": "all-old-gits-rule-t-shirts-sweaters-hoodies",
+      "href": "/p/all-old-gits-rule-t-shirts-sweaters-hoodies"
+    },
+    {
+      "name": "Retro T",
+      "slug": "retro-t-shirts-sweaters-hoodies-and-tops",
+      "href": "/p/retro-t-shirts-sweaters-hoodies-and-tops"
+    },
+    {
+      "name": "Ugly Christmas Sweat...",
+      "slug": "ugly-christmas-sweaters-grumpy-old-man-t-shirts",
+      "href": "/p/ugly-christmas-sweaters-grumpy-old-man-t-shirts"
+    },
+    {
+      "name": "Couple Shirts",
+      "slug": "sweatshirts-for-couples",
+      "href": "/p/sweatshirts-for-couples"
+    }
+  ],
+  "footerColumns": [
+    {
+      "title": "Store Info",
+      "links": [
+        {
+          "name": "About us",
+          "slug": "about-us",
+          "href": "/about-us"
+        },
+        {
+          "name": "Privacy Policy",
+          "slug": "privacy",
+          "href": "/privacy"
+        },
+        {
+          "name": "Terms & conditions",
+          "slug": "terms",
+          "href": "/terms"
+        },
+        {
+          "name": "Copyright & trademark policy",
+          "slug": "copyright",
+          "href": "/copyright"
+        },
+        {
+          "name": "Contact us",
+          "slug": "request",
+          "href": "/faq/request"
+        },
+        {
+          "name": "FAQs",
+          "slug": "faq",
+          "href": "/faq"
+        }
+      ]
+    },
+    {
+      "title": "Store Info",
+      "links": [
+        {
+          "name": "About us",
+          "slug": "about-us",
+          "href": "/about-us"
+        },
+        {
+          "name": "Privacy Policy",
+          "slug": "privacy",
+          "href": "/privacy"
+        },
+        {
+          "name": "Terms & conditions",
+          "slug": "terms",
+          "href": "/terms"
+        },
+        {
+          "name": "Copyright & trademark policy",
+          "slug": "copyright",
+          "href": "/copyright"
+        },
+        {
+          "name": "Contact us",
+          "slug": "request",
+          "href": "/faq/request"
+        },
+        {
+          "name": "FAQs",
+          "slug": "faq",
+          "href": "/faq"
+        }
+      ]
+    },
+    {
+      "title": "Store Info",
+      "links": [
+        {
+          "name": "About us",
+          "slug": "about-us",
+          "href": "/about-us"
+        },
+        {
+          "name": "Privacy Policy",
+          "slug": "privacy",
+          "href": "/privacy"
+        },
+        {
+          "name": "Terms & conditions",
+          "slug": "terms",
+          "href": "/terms"
+        },
+        {
+          "name": "Copyright & trademark policy",
+          "slug": "copyright",
+          "href": "/copyright"
+        }
+      ]
+    },
+    {
+      "title": "Store Info",
+      "links": [
+        {
+          "name": "About us",
+          "slug": "about-us",
+          "href": "/about-us"
+        },
+        {
+          "name": "Privacy Policy",
+          "slug": "privacy",
+          "href": "/privacy"
+        },
+        {
+          "name": "Terms & conditions",
+          "slug": "terms",
+          "href": "/terms"
+        },
+        {
+          "name": "Copyright & trademark policy",
+          "slug": "copyright",
+          "href": "/copyright"
+        }
+      ]
+    },
+    {
+      "title": null,
+      "links": [
+        {
+          "name": "About us",
+          "slug": "about-us",
+          "href": "/about-us"
+        },
+        {
+          "name": "Privacy Policy",
+          "slug": "privacy",
+          "href": "/privacy"
+        },
+        {
+          "name": "Terms & conditions",
+          "slug": "terms",
+          "href": "/terms"
+        },
+        {
+          "name": "Copyright & trademark policy",
+          "slug": "copyright",
+          "href": "/copyright"
+        }
+      ]
+    },
+    {
+      "title": "Help & Support",
+      "links": [
+        {
+          "name": "Contact us",
+          "slug": "request",
+          "href": "/faq/request"
+        },
+        {
+          "name": "FAQs",
+          "slug": "faq",
+          "href": "/faq"
+        }
+      ]
+    },
+    {
+      "title": "Help & Support",
+      "links": [
+        {
+          "name": "Contact us",
+          "slug": "request",
+          "href": "/faq/request"
+        },
+        {
+          "name": "FAQs",
+          "slug": "faq",
+          "href": "/faq"
+        }
+      ]
+    },
+    {
+      "title": null,
+      "links": [
+        {
+          "name": "Contact us",
+          "slug": "request",
+          "href": "/faq/request"
+        },
+        {
+          "name": "FAQs",
+          "slug": "faq",
+          "href": "/faq"
+        }
+      ]
+    }
+  ],
+  "settings": {}
+}

@@ -5,6 +5,10 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chunk: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+      fail-fast: false
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -19,11 +23,30 @@ jobs:
           npm install
           npx playwright install --with-deps chromium
           
-      - name: Run Extraction Swarm
+      - name: Run Extraction Swarm (Chunk ${{ matrix.chunk }})
+        env:
+          CHUNK_INDEX: ${{ matrix.chunk }}
         run: node parallel_swarm.js
         
       - name: Upload Manifest & Assets
         uses: actions/upload-artifact@v4
         with:
-          name: full-store-extraction
-          path: output/
+          name: full-store-extraction-chunk-${{ matrix.chunk }}
+          path: output/images/products/
+
+  aggregate:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all chunk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-products
+          pattern: full-store-extraction-chunk-*
+          merge-multiple: true
+
+      - name: Upload Master Zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: FULL-STORE-MOCKUPS-MASTER
+          path: all-products/

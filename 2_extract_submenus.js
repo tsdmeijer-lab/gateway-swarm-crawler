@@ -18,7 +18,8 @@ async function extractPhase2() {
     return;
   }
 
-  const menus = JSON.parse(fs.readFileSync(menusPath, 'utf-8'));
+  const menusData = JSON.parse(fs.readFileSync(menusPath, 'utf-8'));
+  const menus = Array.isArray(menusData) ? menusData : (menusData.headerMenu || []);
   const targetUrl = 'https://theoldgrumpyclub.com';
   
   const browser = await launchBrowser();

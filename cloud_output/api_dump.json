@@ -1,0 +1,614 @@
+[
+  {
+    "url": "https://buyer-experience-gateway.mayzing.com/graphql",
+    "payload": {
+      "data": {
+        "capi": {
+          "success": false
+        }
+      }
+    }
+  },
+  {
+    "url": "https://buyer-experience-gateway.mayzing.com/graphql",
+    "payload": {
+      "data": {
+        "capi": {
+          "success": false
+        }
+      }
+    }
+  },
+  {
+    "url": "https://buyer-experience-gateway.mayzing.com/graphql",
+    "payload": {
+      "data": {
+        "activePromotions": []
+      }
+    }
+  },
+  {
+    "url": "https://buyer-experience-gateway.mayzing.com/graphql",
+    "payload": {
+      "data": {
+        "stockItem": {
+          "stockLevel": "FULL"
+        }
+      }
+    }
+  },
+  {
+    "url": "https://buyer-experience-gateway.mayzing.com/graphql",
+    "payload": {
+      "data": {
+        "mainMerchProducts": [
+          {
+            "id": "6535a84330459da243f93c7d",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3195,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2799,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pma2gwybx818/image.png?color=BELLA_CANVAS-BLACK&surfaceUrls=700dac93-e7df-4b4d-bfc4-a146b978d8f7%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F700dac93-e7df-4b4d-bfc4-a146b978d8f7%3FdesignId%3D6535a8434bb78b0d658c5dbe%26version%3D2%26customizationProviderDefinitionId%3Dppa2gwybx80",
+            "mainVariationMockup": {
+              "imageId": "68cad4344b2c455f020120f6",
+              "color": "BELLA_CANVAS-BLACK",
+              "signedUri": "id:pma2gwybx818,sig:Y7aHJh7rUxAOcjcIBzSyD7DXSX7M4DcmAgmb7eg9PVE,c:BELLA_CANVAS-BLACK,s:700dac93-e7df-4b4d-bfc4-a146b978d8f7,d:6535a8434bb78b0d658c5dbe,dv:2,cpd:ppa2gwybx80",
+              "variationIds": [
+                "6535a84330459da243f93c84",
+                "6535a84330459da243f93c85",
+                "6535a84330459da243f93c86",
+                "6535a84330459da243f93c87",
+                "6535a84330459da243f93c88",
+                "6535a84330459da243f93c89"
+              ]
+            },
+            "baseProduct": {
+              "name": "Premium T-Shirt"
+            }
+          },
+          {
+            "id": "6535a83f24bca47fb9a5e477",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 4495,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 3899,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pm3z5mcddp38/image.png?color=AWDIS-JET_BLACK&surfaceUrls=293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3FdesignId%3D6535a83f4bb78b0d658c5d74%26version%3D2%26customizationProviderDefinitionId%3Dpp3z5mcddp0",
+            "mainVariationMockup": {
+              "imageId": "68c9bbe219d43311a6251283",
+              "color": "AWDIS-JET_BLACK",
+              "signedUri": "id:pm3z5mcddp38,sig:_g8slwAkp0SFFTzzGqnyUM1YdMWDVPVVYUA0jVAszr4,c:AWDIS-JET_BLACK,s:293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1,d:6535a83f4bb78b0d658c5d74,dv:2,cpd:pp3z5mcddp0",
+              "variationIds": [
+                "6535a83f24bca47fb9a5e478",
+                "6535a83f24bca47fb9a5e479",
+                "6535a83f24bca47fb9a5e47a",
+                "6535a83f24bca47fb9a5e47b",
+                "6535a83f24bca47fb9a5e47c",
+                "6535a83f24bca47fb9a5e47d",
+                "6535a83f24bca47fb9a5e47e",
+                "6535a83f24bca47fb9a5e47f"
+              ]
+            },
+            "baseProduct": {
+              "name": "Unisex Classic Hoodie"
+            }
+          },
+          {
+            "id": "6535a83e30459da243f93b76",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3995,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 3499,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pm9xgw0wvk48/image.png?color=AWDIS-JET_BLACK&surfaceUrls=293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3FdesignId%3D6535a83e06c6e06348d75a2a%26version%3D2%26customizationProviderDefinitionId%3Dpp9xgw0wvk0",
+            "mainVariationMockup": {
+              "imageId": "68c9bb85a4111d5921a9648f",
+              "color": "AWDIS-JET_BLACK",
+              "signedUri": "id:pm9xgw0wvk48,sig:__mi1rDRNcsrW6RLwAw9KY_AFPSafpvHZPCINoiNRLI,c:AWDIS-JET_BLACK,s:293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1,d:6535a83e06c6e06348d75a2a,dv:2,cpd:pp9xgw0wvk0",
+              "variationIds": [
+                "6535a83e30459da243f93b77",
+                "6535a83e30459da243f93b78",
+                "6535a83e30459da243f93b79",
+                "6535a83e30459da243f93b7a",
+                "6535a83e30459da243f93b7b",
+                "6535a83e30459da243f93b7c",
+                "6535a83e30459da243f93b7d",
+                "6535a83e30459da243f93b7e"
+              ]
+            },
+            "baseProduct": {
+              "name": "Classic Sweatshirt"
+            }
+          },
+          {
+            "id": "6535a83f24bca47fb9a5e4da",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 2895,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2499,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pm4qbf6y5910/image.png?color=BELLA_CANVAS-BLACK&surfaceUrls=293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3FdesignId%3D6535a83f06c6e06348d75a3c%26version%3D2%26customizationProviderDefinitionId%3Dpp4qbf6y590",
+            "mainVariationMockup": {
+              "imageId": "68c9bb5419d43311a624adc4",
+              "color": "BELLA_CANVAS-BLACK",
+              "signedUri": "id:pm4qbf6y5910,sig:6rGTB4AJkaRYxvdWjPb-PXpgp2QKLPmw0rDBNxmEpCQ,c:BELLA_CANVAS-BLACK,s:293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1,d:6535a83f06c6e06348d75a3c,dv:2,cpd:pp4qbf6y590",
+              "variationIds": [
+                "6535a83f24bca47fb9a5e4e3",
+                "6535a83f24bca47fb9a5e4e4",
+                "6535a83f24bca47fb9a5e4e5",
+                "6535a83f24bca47fb9a5e4e6"
+              ]
+            },
+            "baseProduct": {
+              "name": "Unisex Tank Top"
+            }
+          },
+          {
+            "id": "6535a83fc80837614fc536b0",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3295,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2899,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmfrwtd8mc0/image.png?color=GILDAN-BLACK&surfaceUrls=293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3FdesignId%3D6535a83f06c6e06348d75a34%26version%3D2%26customizationProviderDefinitionId%3Dppfrwtd8mc0",
+            "mainVariationMockup": {
+              "imageId": "68c9bb23b90efe4cf0be5f6e",
+              "color": "GILDAN-BLACK",
+              "signedUri": "id:pmfrwtd8mc0,sig:clmxJbd-kMPAVNUrrB5ln2uUZxmFms2_PETDjJdigLw,c:GILDAN-BLACK,s:293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1,d:6535a83f06c6e06348d75a34,dv:2,cpd:ppfrwtd8mc0",
+              "variationIds": [
+                "6535a83fc80837614fc536b6",
+                "6535a83fc80837614fc536b7",
+                "6535a83fc80837614fc536b8",
+                "6535a83fc80837614fc536b9",
+                "6535a83fc80837614fc536ba",
+                "6535a83fc80837614fc536bb",
+                "6535a83fc80837614fc536bc"
+              ]
+            },
+            "baseProduct": {
+              "name": "Long Sleeve T-Shirt"
+            }
+          },
+          {
+            "id": "6535a83c32c8a074a0ecb188",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 2795,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2399,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmme3h6e742c/image.png?color=GILDAN-ROYAL&surfaceUrls=d83e3ca8-96f0-4f63-bd72-baf26d10e4f0%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Fd83e3ca8-96f0-4f63-bd72-baf26d10e4f0%3FdesignId%3D6535a83c06c6e06348d75a13%26version%3D2%26customizationProviderDefinitionId%3Dppme3h6e740",
+            "mainVariationMockup": {
+              "imageId": "68c9baef9536909dfb8996ab",
+              "color": "GILDAN-ROYAL",
+              "signedUri": "id:pmme3h6e742c,sig:j3Pub12X4Ak-P9cIbEha4iLNohRvoUKZ5vbZbOwgFJw,c:GILDAN-ROYAL,s:d83e3ca8-96f0-4f63-bd72-baf26d10e4f0,d:6535a83c06c6e06348d75a13,dv:2,cpd:ppme3h6e740",
+              "variationIds": [
+                "6535a83c32c8a074a0ecb197",
+                "6535a83c32c8a074a0ecb198",
+                "6535a83c32c8a074a0ecb199",
+                "6535a83c32c8a074a0ecb19a",
+                "6535a83c32c8a074a0ecb19b",
+                "6535a83c32c8a074a0ecb19c",
+                "6535a83c32c8a074a0ecb19d",
+                "6535a83c32c8a074a0ecb19e"
+              ]
+            },
+            "baseProduct": {
+              "name": "Men's T-Shirt"
+            }
+          },
+          {
+            "id": "6535a8400d4cf35846aaa13a",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3995,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 3499,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmw7f2uzc76/image.png?color=GILDAN-BLACK&surfaceUrls=6ac6cc29-86c5-4b28-9722-bf9ed1f5f1af%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F6ac6cc29-86c5-4b28-9722-bf9ed1f5f1af%3FdesignId%3D6535a84006c6e06348d75a43%26version%3D2%26customizationProviderDefinitionId%3Dppw7f2uzc70",
+            "mainVariationMockup": {
+              "imageId": "68c9bab019d43311a6244d8c",
+              "color": "GILDAN-BLACK",
+              "signedUri": "id:pmw7f2uzc76,sig:mDFFBUxvf2GVQrKR7b6oKRPisvLRM5YG-ITvgdGSoag,c:GILDAN-BLACK,s:6ac6cc29-86c5-4b28-9722-bf9ed1f5f1af,d:6535a84006c6e06348d75a43,dv:2,cpd:ppw7f2uzc70",
+              "variationIds": [
+                "6535a8400d4cf35846aaa159",
+                "6535a8400d4cf35846aaa15a",
+                "6535a8400d4cf35846aaa15b",
+                "6535a8400d4cf35846aaa15c",
+                "6535a8400d4cf35846aaa15d",
+                "6535a8400d4cf35846aaa15e"
+              ]
+            },
+            "baseProduct": {
+              "name": "Unisex Sweatshirt"
+            }
+          },
+          {
+            "id": "6535a841834615d9a1bcf096",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 4995,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 4299,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pm4ypwg6t48/image.png?color=GILDAN-BLACK&surfaceUrls=14c35703-c240-40e0-b817-f22d44f8595e%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F14c35703-c240-40e0-b817-f22d44f8595e%3FdesignId%3D6535a84106c6e06348d75a4d%26version%3D2%26customizationProviderDefinitionId%3Dpp4ypwg6t40",
+            "mainVariationMockup": {
+              "imageId": "68c9ba80d5374362b82d4a10",
+              "color": "GILDAN-BLACK",
+              "signedUri": "id:pm4ypwg6t48,sig:1HCeb8hfEfbAZb5woGFnuNvVqfWIIPtNvTBA0NXLETU,c:GILDAN-BLACK,s:14c35703-c240-40e0-b817-f22d44f8595e,d:6535a84106c6e06348d75a4d,dv:2,cpd:pp4ypwg6t40",
+              "variationIds": [
+                "6535a841834615d9a1bcf0cf",
+                "6535a841834615d9a1bcf0d0",
+                "6535a841834615d9a1bcf0d1",
+                "6535a841834615d9a1bcf0d2",
+                "6535a841834615d9a1bcf0d3",
+                "6535a841834615d9a1bcf0d4",
+                "6535a841834615d9a1bcf0d5",
+                "6535a841834615d9a1bcf0d6"
+              ]
+            },
+            "baseProduct": {
+              "name": "Heavy Blend Hoodie"
+            }
+          },
+          {
+            "id": "6535a8400d4cf35846aaa0d3",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 5395,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 4699,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmm5b42dcf8/image.png?color=AWDIS-JET_BLACK&surfaceUrls=c830c07a-7cbe-4150-938e-96aaa0b6dcb3%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Fc830c07a-7cbe-4150-938e-96aaa0b6dcb3%3FdesignId%3D6535a8404bb78b0d658c5d82%26version%3D2%26customizationProviderDefinitionId%3Dppm5b42dcf0",
+            "mainVariationMockup": {
+              "imageId": "68c9ba217642968c146259c4",
+              "color": "AWDIS-JET_BLACK",
+              "signedUri": "id:pmm5b42dcf8,sig:Kk3HqjUGAq4gP7O6Bj-XUPY7Wl6Ky4BFEhcyEvcsAEg,c:AWDIS-JET_BLACK,s:c830c07a-7cbe-4150-938e-96aaa0b6dcb3,d:6535a8404bb78b0d658c5d82,dv:2,cpd:ppm5b42dcf0",
+              "variationIds": [
+                "6535a8400d4cf35846aaa0d9",
+                "6535a8400d4cf35846aaa0da",
+                "6535a8400d4cf35846aaa0db",
+                "6535a8400d4cf35846aaa0dc",
+                "6535a8400d4cf35846aaa0dd"
+              ]
+            },
+            "baseProduct": {
+              "name": "Unisex Zip Hoodie"
+            }
+          },
+          {
+            "id": "6535a8403dace34eee3e1469",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 2895,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2499,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmaphzcagt12/image.png?color=GILDAN-BLACK&surfaceUrls=af8f77e3-d99c-4504-928f-5697d8145c8c%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Faf8f77e3-d99c-4504-928f-5697d8145c8c%3FdesignId%3D6535a84006c6e06348d75a48%26version%3D2%26customizationProviderDefinitionId%3Dppaphzcagt0",
+            "mainVariationMockup": {
+              "imageId": "68c9ba0614553a1dc92af694",
+              "color": "GILDAN-BLACK",
+              "signedUri": "id:pmaphzcagt12,sig:VauJyhP2jXSdNUbHCJ-ezr_ZO2ASfWRNowRY8jHMWs8,c:GILDAN-BLACK,s:af8f77e3-d99c-4504-928f-5697d8145c8c,d:6535a84006c6e06348d75a48,dv:2,cpd:ppaphzcagt0",
+              "variationIds": [
+                "6535a8403dace34eee3e147d",
+                "6535a8403dace34eee3e147e",
+                "6535a8403dace34eee3e147f",
+                "6535a8403dace34eee3e1480",
+                "6535a8403dace34eee3e1481"
+              ]
+            },
+            "baseProduct": {
+              "name": "Unisex V-neck Tee"
+            }
+          },
+          {
+            "id": "6535a841401df59ce7fb0e32",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3295,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2899,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pm406qyq4r0/image.png?color=BELLA_CANVAS-BLACK&surfaceUrls=d45fb9d5-918f-416a-966e-2b968aaa46ad%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Fd45fb9d5-918f-416a-966e-2b968aaa46ad%3FdesignId%3D6535a8414bb78b0d658c5da7%26version%3D2%26customizationProviderDefinitionId%3Dpp406qyq4r0",
+            "mainVariationMockup": {
+              "imageId": "68c9b9ebd31eea33c50c0fc3",
+              "color": "BELLA_CANVAS-BLACK",
+              "signedUri": "id:pm406qyq4r0,sig:dqkIvDPXJDrCotSHs0tbVvsXnoLjKHdJ_n1-dqxvtSA,c:BELLA_CANVAS-BLACK,s:d45fb9d5-918f-416a-966e-2b968aaa46ad,d:6535a8414bb78b0d658c5da7,dv:2,cpd:pp406qyq4r0",
+              "variationIds": [
+                "6535a841401df59ce7fb0e33",
+                "6535a841401df59ce7fb0e34",
+                "6535a841401df59ce7fb0e35",
+                "6535a841401df59ce7fb0e36",
+                "6535a841401df59ce7fb0e37"
+              ]
+            },
+            "baseProduct": {
+              "name": "Long Body Tee"
+            }
+          },
+          {
+            "id": "6535a842834615d9a1bcf2b5",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3195,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2799,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pm5zy7gpkz6/image.png?color=BELLA_CANVAS-BLACK&surfaceUrls=8fe07613-01fa-4e81-9c03-8d80501dd959%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F8fe07613-01fa-4e81-9c03-8d80501dd959%3FdesignId%3D6535a84206c6e06348d75a75%26version%3D2%26customizationProviderDefinitionId%3Dpp5zy7gpkz0",
+            "mainVariationMockup": {
+              "imageId": "68c9b98d3f4015035e894f1c",
+              "color": "BELLA_CANVAS-BLACK",
+              "signedUri": "id:pm5zy7gpkz6,sig:7Ke6_N2j9LGvfuVUJ9hXyNUy2hhA2QcGdAGj5pfRMkQ,c:BELLA_CANVAS-BLACK,s:8fe07613-01fa-4e81-9c03-8d80501dd959,d:6535a84206c6e06348d75a75,dv:2,cpd:pp5zy7gpkz0",
+              "variationIds": [
+                "6535a842834615d9a1bcf2bb",
+                "6535a842834615d9a1bcf2bc",
+                "6535a842834615d9a1bcf2bd",
+                "6535a842834615d9a1bcf2be",
+                "6535a842834615d9a1bcf2bf"
+              ]
+            },
+            "baseProduct": {
+              "name": "V-Neck T-Shirt"
+            }
+          },
+          {
+            "id": "6535a843239773c9c94fa7f5",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 2895,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2499,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmv7hfebg86/image.png?color=GILDAN-BLACK&surfaceUrls=293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2F293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1%3FdesignId%3D6535a84306c6e06348d75a82%26version%3D2%26customizationProviderDefinitionId%3Dppv7hfebg80",
+            "mainVariationMockup": {
+              "imageId": "68c9b959da23ce7c67714a2d",
+              "color": "GILDAN-BLACK",
+              "signedUri": "id:pmv7hfebg86,sig:IacLykkXY_e2axIEHaWmmlLdbA_3arrmR4scwnvbJU4,c:GILDAN-BLACK,s:293b0ab4-1f07-4646-bc09-fd6f1c2fc3a1,d:6535a84306c6e06348d75a82,dv:2,cpd:ppv7hfebg80",
+              "variationIds": [
+                "6535a843239773c9c94fa7f9",
+                "6535a843239773c9c94fa7fa",
+                "6535a843239773c9c94fa7fb"
+              ]
+            },
+            "baseProduct": {
+              "name": "Women's Tank Top"
+            }
+          },
+          {
+            "id": "6535a84160361ba27d5c66bc",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3495,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2999,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmaktf7e9x18/image.png?color=BELLA_CANVAS-VINTAGE_NAVY_TRIBLEND&surfaceUrls=dc0f7118-9d6d-4a85-8d3c-0d659727fbe4%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Fdc0f7118-9d6d-4a85-8d3c-0d659727fbe4%3FdesignId%3D6535a8414bb78b0d658c5db0%26version%3D2%26customizationProviderDefinitionId%3Dppaktf7e9x0",
+            "mainVariationMockup": {
+              "imageId": "68c9b9448dd06b9c97608e7b",
+              "color": "BELLA_CANVAS-VINTAGE_NAVY_TRIBLEND",
+              "signedUri": "id:pmaktf7e9x18,sig:d3OxaMQIvLAGtFU7ZIGrVa1y5qV8RcwhJ534Orprsdc,c:BELLA_CANVAS-VINTAGE_NAVY_TRIBLEND,s:dc0f7118-9d6d-4a85-8d3c-0d659727fbe4,d:6535a8414bb78b0d658c5db0,dv:2,cpd:ppaktf7e9x0",
+              "variationIds": [
+                "6535a84160361ba27d5c66c7",
+                "6535a84160361ba27d5c66c8",
+                "6535a84160361ba27d5c66c9",
+                "6535a84160361ba27d5c66ca",
+                "6535a84160361ba27d5c66cb"
+              ]
+            },
+            "baseProduct": {
+              "name": "Triblend Tee"
+            }
+          },
+          {
+            "id": "6535a84291c67a4973d83929",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 3395,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2999,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmmd6er455c/image.png?color=GILDAN-ROYAL&surfaceUrls=af8f77e3-d99c-4504-928f-5697d8145c8c%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Faf8f77e3-d99c-4504-928f-5697d8145c8c%3FdesignId%3D6535a8424bb78b0d658c5db5%26version%3D2%26customizationProviderDefinitionId%3Dppmd6er4550",
+            "mainVariationMockup": {
+              "imageId": "68c9b8f9e1f1354c9cf0f774",
+              "color": "GILDAN-ROYAL",
+              "signedUri": "id:pmmd6er455c,sig:amqlMHaZJMk4KGuuPATW3RuUanIDJABB1XzgTRr2-Cw,c:GILDAN-ROYAL,s:af8f77e3-d99c-4504-928f-5697d8145c8c,d:6535a8424bb78b0d658c5db5,dv:2,cpd:ppmd6er4550",
+              "variationIds": [
+                "6535a84291c67a4973d8392f",
+                "6535a84291c67a4973d83930",
+                "6535a84291c67a4973d83931",
+                "6535a84291c67a4973d83932",
+                "6535a84291c67a4973d83933"
+              ]
+            },
+            "baseProduct": {
+              "name": "Long Sleeve T-Shirt"
+            }
+          },
+          {
+            "id": "6535a84330459da243f93cea",
+            "name": "Sarcastic quotes T-shirts  - My Sarcasm will Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters, Notebook Covers and Mugs",
+            "prices": [
+              {
+                "value": 2895,
+                "currency": "USD",
+                "compareAt": 0
+              },
+              {
+                "value": 2499,
+                "currency": "EUR",
+                "compareAt": 0
+              }
+            ],
+            "description": "Sarcastic quote T  shirts  - My Sarcasm will Always Outlive your Stupidity - Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs\n\nYou won't find this design anywhere else. Order with friends or family and\nsave on shipping.\nClick The \"Buy Now\" to get your My Sarcasm will Always Outlive your Stupidity Grumpy Old man T shirts, Hoodies, Sweaters, Posters and Mugs.\nNeed help ordering? Questions about shipping? Contact Moteefe Customer\nSupport at support@moteefe.io\n",
+            "customizable": false,
+            "mainImageUrl": "http://buyer-experience-gateway.jx-production.svc.cluster.local./mockups/pmb5eqd8hw18/image.png?color=GILDAN-BLACK&surfaceUrls=af8f77e3-d99c-4504-928f-5697d8145c8c%3Ahttp%3A%2F%2Fdesign-renderer.athena-prod.local%2Fsurfaces%2Faf8f77e3-d99c-4504-928f-5697d8145c8c%3FdesignId%3D6535a8434bb78b0d658c5dc4%26version%3D2%26customizationProviderDefinitionId%3Dppb5eqd8hw0",
+            "mainVariationMockup": {
+              "imageId": "68c9b7af0dc4fcabc7dfd9af",
+              "color": "GILDAN-BLACK",
+              "signedUri": "id:pmb5eqd8hw18,sig:Geq-8Z3Z8OB8lQqPaVFhMDY_WWdLcV7Nqy4yzDU9zZ8,c:GILDAN-BLACK,s:af8f77e3-d99c-4504-928f-5697d8145c8c,d:6535a8434bb78b0d658c5dc4,dv:2,cpd:ppb5eqd8hw0",
+              "variationIds": [
+                "6535a84330459da243f93d04",
+                "6535a84330459da243f93d05",
+                "6535a84330459da243f93d06",
+                "6535a84330459da243f93d07",
+                "6535a84330459da243f93d08"
+              ]
+            },
+            "baseProduct": {
+              "name": "Women's V-neck Tee"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://buyer-experience-gateway.mayzing.com/graphql",
+    "payload": {
+      "data": {
+        "crossSellItems": []
+      }
+    }
+  }
+]
