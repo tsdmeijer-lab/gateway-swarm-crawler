@@ -37,9 +37,15 @@ async function processCampaign(browser, campaignUrl, index) {
   
   try {
     // --- PHASE A: Harvest Styles ---
+    let campaignOrientation = 'CUSTOM';
     try {
       await page.goto(campaignUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
       await page.waitForTimeout(3000); // Wait for React hydration
+      const rawHtml = await page.content();
+      const match = rawHtml.match(/FLAT_LAY-(BACK|FRONT)/);
+      if (match && match[1]) {
+          campaignOrientation = match[1];
+      }
     } catch(e) {
       console.log(`[Worker ${index}] Error loading main campaign URL: Timeout or server hang.`);
       await context.close();
@@ -183,7 +189,9 @@ async function processCampaign(browser, campaignUrl, index) {
             size, 
             price, 
             inStock: !isDisabled, 
-            local_mockup 
+            local_mockup,
+            orientation: campaignOrientation,
+            requires_flux: campaignOrientation !== 'CUSTOM'
           });
         }
       }
