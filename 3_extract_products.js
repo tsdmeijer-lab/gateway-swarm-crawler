@@ -29,36 +29,48 @@ async function extractPhase3() {
   try {
     for (const mainTree of allSubMenusMap) {
       console.log(`\n================================`);
-      console.log(`Processing Main Silo: [${mainTree.mainCategory}]`);
+      console.log(`Processing Main Silo: [${mainTree.name}]`);
       
-      for (const sub of mainTree.subCategories) {
-        console.log(`\n  -> Targeting Grid: ${sub.name}`);
-        console.log(`  -> URL: ${sub.url}`);
+      if (!mainTree.subCategories || mainTree.subCategories.length === 0) {
+        console.log(`\n  -> Targeting Grid: ${mainTree.name} (No Sub-Categories)`);
+        console.log(`  -> URL: ${mainTree.url}`);
         
         try {
-            const productUrls = await extractCampaignUrlsFromGrid(page, sub.url);
+            const productUrls = await extractCampaignUrlsFromGrid(page, mainTree.url);
             console.log(`  ✅ Found ${productUrls.length} products on this grid.`);
             
-            // Add them to the master catalog and stamp them with tags
             for (const url of productUrls) {
-                // Remove tracking query parameters to ensure pure URL deduplication
                 const pureUrl = url.split('?')[0];
-                
                 if (!productCatalog[pureUrl]) {
-                    productCatalog[pureUrl] = {
-                        url: pureUrl,
-                        tags: new Set()
-                    };
+                    productCatalog[pureUrl] = { url: pureUrl, tags: new Set() };
                 }
-                
-                // Add the hierarchical tags
-                productCatalog[pureUrl].tags.add(mainTree.mainCategory);
-                if (sub.name !== mainTree.mainCategory) {
-                    productCatalog[pureUrl].tags.add(sub.name);
-                }
+                productCatalog[pureUrl].tags.add(mainTree.name);
             }
         } catch (err) {
             console.log(`  ❌ Failed to extract grid: ${err.message}`);
+        }
+      } else {
+        for (const sub of mainTree.subCategories) {
+          console.log(`\n  -> Targeting Grid: ${sub.name}`);
+          console.log(`  -> URL: ${sub.url}`);
+          
+          try {
+              const productUrls = await extractCampaignUrlsFromGrid(page, sub.url);
+              console.log(`  ✅ Found ${productUrls.length} products on this grid.`);
+              
+              for (const url of productUrls) {
+                  const pureUrl = url.split('?')[0];
+                  if (!productCatalog[pureUrl]) {
+                      productCatalog[pureUrl] = { url: pureUrl, tags: new Set() };
+                  }
+                  productCatalog[pureUrl].tags.add(mainTree.name);
+                  if (sub.name !== mainTree.name) {
+                      productCatalog[pureUrl].tags.add(sub.name);
+                  }
+              }
+          } catch (err) {
+              console.log(`  ❌ Failed to extract grid: ${err.message}`);
+          }
         }
       }
     }

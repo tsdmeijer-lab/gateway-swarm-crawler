@@ -20,7 +20,7 @@ const fullManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
 // GitHub Actions Chunking Logic
 const CHUNK_INDEX = parseInt(process.env.CHUNK_INDEX || '0', 10);
-const ITEMS_PER_CHUNK = 10;
+const ITEMS_PER_CHUNK = 13;
 const startIndex = CHUNK_INDEX * ITEMS_PER_CHUNK;
 const endIndex = Math.min(startIndex + ITEMS_PER_CHUNK, fullManifest.length);
 
@@ -31,16 +31,30 @@ if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
 async function processCampaign(browser, campaignUrl, index) {
   console.log(`[Worker ${index}] Started campaign: ${campaignUrl.split('/').pop()}`);
-  const context = await browser.newContext();
+  const context = await browser.newContext({
+    extraHTTPHeaders: {
+      'X-Gateway-Bypass': 'true'
+    }
+  });
   const page = await context.newPage();
   const items = [];
+  const redirectMap = {};
   
   try {
     // --- PHASE A: Harvest Styles ---
     let campaignOrientation = 'CUSTOM';
+    let designName = campaignUrl.split('/').pop();
     try {
       await page.goto(campaignUrl, { waitUntil: 'domcontentloaded', timeout: 45000 });
       await page.waitForTimeout(3000); // Wait for React hydration
+      
+      try {
+        const h1 = await page.$eval('h1', el => el.textContent);
+        if (h1) designName = h1.trim();
+      } catch (e) {
+        console.log(`[Worker ${index}] Could not find H1 for design name, falling back to URL slug.`);
+      }
+      
       const rawHtml = await page.content();
       const match = rawHtml.match(/FLAT_LAY-(BACK|FRONT)/);
       if (match && match[1]) {
@@ -49,7 +63,7 @@ async function processCampaign(browser, campaignUrl, index) {
     } catch(e) {
       console.log(`[Worker ${index}] Error loading main campaign URL: Timeout or server hang.`);
       await context.close();
-      return [];
+      return { items: [], redirects: {} };
     }
     
     let ddInitial;
@@ -58,7 +72,7 @@ async function processCampaign(browser, campaignUrl, index) {
     } catch(e) {
       console.log(`[Worker ${index}] FAILED: Dropdown never appeared. Moteefe might be blocking us or React failed to load.`);
       await context.close();
-      return [];
+      return { items: [], redirects: {} };
     }
     
     await ddInitial.click();
@@ -134,10 +148,17 @@ async function processCampaign(browser, campaignUrl, index) {
         if (mockupImg) {
           mockupUrl = await mockupImg.getAttribute('src');
           const highResUrl = mockupUrl.replace('w:500', 'w:1000');
+          
+          // Extract the unique Mayzing ID from the legacy URL for the 301 Redirect map
+          const idMatch = mockupUrl.match(/id:([a-zA-Z0-9]+)/);
+          const legacyImageId = idMatch ? idMatch[1] : null;
+
+          const cleanDesign = designName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
           const cleanStyle = target.style.toLowerCase().replace(/[^a-z0-9]+/g, '-');
           const cleanColor = colorName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          const actualIndex = startIndex + index;
-          const filename = `c${actualIndex}-${cleanStyle}-${cleanColor}.webp`;
+          
+          const modifier = campaignOrientation === 'BACK' ? 'back-printed-' : '';
+          const filename = `${cleanDesign}-${modifier}${cleanStyle}-${cleanColor}.webp`;
           
           const campaignHostname = new URL(campaignUrl).hostname;
           const storeSlug = campaignHostname.replace(/\./g, '_');
@@ -161,6 +182,10 @@ async function processCampaign(browser, campaignUrl, index) {
             }));
             
             console.log(`[Worker ${index}] Uploaded ${s3Key} to R2`);
+            
+            if (legacyImageId) {
+              redirectMap[legacyImageId] = local_mockup;
+            }
           } catch(e) {
              console.error(`[Worker ${index}] Failed to upload ${s3Key}:`, e.message);
           }
@@ -203,7 +228,7 @@ async function processCampaign(browser, campaignUrl, index) {
   }
   
   console.log(`[Worker ${index}] Finished. Extracted ${items.length} items.`);
-  return items;
+  return { items, redirects: redirectMap };
 }
 
 (async () => {
@@ -215,12 +240,15 @@ async function processCampaign(browser, campaignUrl, index) {
   const startTime = Date.now();
   const browser = await chromium.launch({ headless: true });
   
-  // Implement Concurrency Pool (Max 3 parallel workers) to prevent CPU resource exhaustion
-  const concurrencyLimit = 3;
+  // Implement Concurrency Pool: Set to 1 (Sequential) to bypass Cloudflare rate-limits and prevent dropped mockups.
+  const concurrencyLimit = 1;
   let activeWorkers = 0;
   let currentIndex = 0;
   const results = [];
 
+  const initialWorkers = [];
+  let globalRedirects = {};
+  
   const processNext = async () => {
     if (currentIndex >= CAMPAIGNS.length) return;
     const url = CAMPAIGNS[currentIndex];
@@ -229,7 +257,8 @@ async function processCampaign(browser, campaignUrl, index) {
     
     activeWorkers++;
     const data = await processCampaign(browser, url, index);
-    results.push(data);
+    results.push(data.items);
+    globalRedirects = { ...globalRedirects, ...data.redirects };
     activeWorkers--;
     
     await processNext();
@@ -247,6 +276,9 @@ async function processCampaign(browser, campaignUrl, index) {
   // Flatten and save the combined global inventory
   const globalInventory = results.flat();
   fs.writeFileSync(path.join(__dirname, 'output', 'parallel_swarm_manifest.json'), JSON.stringify(globalInventory, null, 2));
+  
+  // Save the 301 Redirect Map
+  fs.writeFileSync(path.join(__dirname, 'output', '301_image_redirect_map.json'), JSON.stringify(globalRedirects, null, 2));
   
   const endTime = Date.now();
   console.log('\n===================================================');

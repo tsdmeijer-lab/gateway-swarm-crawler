@@ -20,7 +20,7 @@ async function extractPhase2() {
 
   const menusData = JSON.parse(fs.readFileSync(menusPath, 'utf-8'));
   const menus = Array.isArray(menusData) ? menusData : (menusData.headerMenu || []);
-  const targetUrl = 'https://theoldgrumpyclub.com';
+  const targetUrl = 'https://grumpyoldrider.co.uk';
   
   const browser = await launchBrowser();
   const page = await browser.newPage();
@@ -38,27 +38,21 @@ async function extractPhase2() {
       }
 
       // Format URL properly, avoiding double slashes. Moteefe collections MUST have /p/
-      const categoryUrl = `${targetUrl}/p/${menu.slug}`.replace(/([^:]\/)\/+/g, "$1");
+      const categoryUrl = menu.url || `${targetUrl}/p/${menu.slug}`.replace(/([^:]\/)\/+/g, "$1");
       
       let subMenus = await extractSubMenus(page, categoryUrl);
       
-      // If no sub-menus exist (no pills found), we create a 'Self' entry
-      // This ensures that the Grid Extractor still crawls the main category grid!
       if (!subMenus || subMenus.length === 0) {
-        console.log(`No pill buttons found. Using Main Category as default grid target.`);
-        subMenus = [{
-          name: menu.name, // e.g. "Retro T"
-          url: categoryUrl,
-          slug: menu.slug
-        }];
+        console.log(`No pill buttons found. Leaving subCategories empty.`);
+        subMenus = [];
       } else {
         console.log(`Found ${subMenus.length} specific sub-categories (pill buttons).`);
       }
 
       allSubMenusMap.push({
-        mainCategory: menu.name,
-        mainSlug: menu.slug,
-        categoryUrl: categoryUrl,
+        name: menu.name,
+        slug: menu.slug,
+        url: categoryUrl,
         subCategories: subMenus
       });
     }

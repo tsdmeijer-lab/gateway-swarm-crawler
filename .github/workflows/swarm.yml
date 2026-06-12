@@ -21,6 +21,7 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 3
       matrix:
         chunk: ${{ fromJson(needs.setup.outputs.chunks) }}
       fail-fast: false

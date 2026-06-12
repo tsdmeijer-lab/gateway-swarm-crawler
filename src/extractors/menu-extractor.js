@@ -69,7 +69,13 @@ async function extractMenu(page, url) {
         const text = link.textContent.trim();
         if (!href || !text || text.length < 2) return null;
         const slug = generateSlug(href, text);
-        return { name: text, slug, href };
+        
+        let absoluteUrl = href;
+        try {
+          absoluteUrl = new URL(href, window.location.origin).href;
+        } catch(e) {}
+        
+        return { name: text, slug, url: absoluteUrl };
       }
 
       // 1. Header Menu
@@ -121,11 +127,11 @@ async function extractMenu(page, url) {
         });
       }
 
-      // Remove duplicates by href
-      const seenHrefs = new Set();
+      // Remove duplicates by url
+      const seenUrls = new Set();
       headerMenu = headerLinks.filter(item => {
-        if (!seenHrefs.has(item.href)) {
-          seenHrefs.add(item.href);
+        if (!seenUrls.has(item.url)) {
+          seenUrls.add(item.url);
           return true;
         }
         return false;

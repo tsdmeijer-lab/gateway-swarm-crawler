@@ -36,17 +36,19 @@ const path = require('path');
       }
   }
 
-  // Pure data-driven filtering: extract pages that are obviously informational (not collections/products)
-  // We identify informational pages if they are not in the main shopping slugs.
-  const shoppingKeywords = ['all', 't-shirts', 'hoodies', 'sweaters', 'arrivals', 'collections', 'apparel'];
-  
   const informationalLinks = uniqueLinks.filter(link => {
-      // If href is present and contains explicit page markers
-      if (link.href && (link.href.includes('/pages/') || link.href.includes('/policies/'))) return true;
+      if (!link.url) return false;
       
-      // Heuristic: If it has obvious shopping keywords, it's a collection.
-      const isShopping = shoppingKeywords.some(kw => link.slug.toLowerCase().includes(kw));
-      return !isShopping;
+      // Mayzing collections always use /p/ in the URL.
+      if (link.url.includes('/p/')) return false;
+      
+      // Ignore root/home links
+      try {
+        const urlObj = new URL(link.url);
+        if (urlObj.pathname === '/' || urlObj.pathname === '') return false;
+      } catch(e) {}
+      
+      return true;
   });
 
   console.log(`Found ${informationalLinks.length} informational pages to extract.`);
@@ -54,7 +56,7 @@ const path = require('path');
 
   for (const menuItem of informationalLinks) {
     const slug = menuItem.slug;
-    const url = menuItem.href ? `https://theoldgrumpyclub.com${menuItem.href.startsWith('/') ? menuItem.href : '/' + menuItem.href}` : `https://theoldgrumpyclub.com/${slug}`;
+    const url = menuItem.url;
     
     console.log(`\nExtracting: ${menuItem.name} (${url})`);
     
@@ -93,7 +95,7 @@ const path = require('path');
         return largestBlock ? largestBlock.innerHTML : document.body.innerHTML;
       });
 
-      results.push({ slug, name: menuItem.name, href: menuItem.href, htmlContent });
+      results.push({ slug, name: menuItem.name, url: menuItem.url, htmlContent });
       console.log(`✅ Extracted ${htmlContent.length} bytes for ${menuItem.name}`);
     } catch (err) {
       console.error(`❌ Failed to extract ${slug}: ${err.message}`);

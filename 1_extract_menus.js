@@ -12,7 +12,7 @@ async function extractPhase1() {
 
   const browser = await launchBrowser();
   const page = await browser.newPage();
-  const targetUrl = 'https://theoldgrumpyclub.com';
+  const targetUrl = 'https://grumpyoldrider.co.uk';
 
   try {
     console.log(`Navigating to ${targetUrl} ...`);

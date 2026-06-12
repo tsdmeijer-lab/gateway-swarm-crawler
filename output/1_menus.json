@@ -1,44 +1,39 @@
 {
   "headerMenu": [
     {
-      "name": "The Old Grumpy Club ...",
-      "slug": "all-old-grumpy-club-t-shirts-sweaters-hoodies",
-      "href": "/p/all-old-grumpy-club-t-shirts-sweaters-hoodies"
+      "name": "Bestsellers Chapter",
+      "slug": "bestsellers-chapter",
+      "url": "https://grumpyoldrider.co.uk/p/bestsellers-chapter"
     },
     {
-      "name": "All Apparel Designs",
-      "slug": "all-grumpy-old-men-t-shirts-hoodies-and-sweaters",
-      "href": "/p/all-grumpy-old-men-t-shirts-hoodies-and-sweaters"
+      "name": "Grumpy Bikers Chapte...",
+      "slug": "grumpy-bikers-chapter",
+      "url": "https://grumpyoldrider.co.uk/p/grumpy-bikers-chapter"
     },
     {
-      "name": "Latest Arrivals",
-      "slug": "latest-t-shirts-arrivals",
-      "href": "/p/latest-t-shirts-arrivals"
+      "name": "Old Bikers Chapter",
+      "slug": "old-bikers-chapter",
+      "url": "https://grumpyoldrider.co.uk/p/old-bikers-chapter"
     },
     {
-      "name": "Our Collections",
-      "slug": "t-shirts-sweaters-hoodies-collections",
-      "href": "/p/t-shirts-sweaters-hoodies-collections"
+      "name": "Retired Bikers Chapt...",
+      "slug": "retired-bikers-chapter",
+      "url": "https://grumpyoldrider.co.uk/p/retired-bikers-chapter"
     },
     {
-      "name": "Old Gits Rule - Grum...",
-      "slug": "all-old-gits-rule-t-shirts-sweaters-hoodies",
-      "href": "/p/all-old-gits-rule-t-shirts-sweaters-hoodies"
+      "name": "Front Printed Chapte...",
+      "slug": "front-printed-chapter",
+      "url": "https://grumpyoldrider.co.uk/p/front-printed-chapter"
     },
     {
-      "name": "Retro T",
-      "slug": "retro-t-shirts-sweaters-hoodies-and-tops",
-      "href": "/p/retro-t-shirts-sweaters-hoodies-and-tops"
+      "name": "Back Printed Chapter",
+      "slug": "back-printed-chapter",
+      "url": "https://grumpyoldrider.co.uk/p/back-printed-chapter"
     },
     {
-      "name": "Ugly Christmas Sweat...",
-      "slug": "ugly-christmas-sweaters-grumpy-old-man-t-shirts",
-      "href": "/p/ugly-christmas-sweaters-grumpy-old-man-t-shirts"
-    },
-    {
-      "name": "Couple Shirts",
-      "slug": "sweatshirts-for-couples",
-      "href": "/p/sweatshirts-for-couples"
+      "name": "New Arrivals",
+      "slug": "new-arrivals",
+      "url": "https://grumpyoldrider.co.uk/p/new-arrivals"
     }
   ],
   "footerColumns": [
@@ -48,32 +43,32 @@
         {
           "name": "About us",
           "slug": "about-us",
-          "href": "/about-us"
+          "url": "https://grumpyoldrider.co.uk/about-us"
         },
         {
           "name": "Privacy Policy",
           "slug": "privacy",
-          "href": "/privacy"
+          "url": "https://grumpyoldrider.co.uk/privacy"
         },
         {
           "name": "Terms & conditions",
           "slug": "terms",
-          "href": "/terms"
+          "url": "https://grumpyoldrider.co.uk/terms"
         },
         {
           "name": "Copyright & trademark policy",
           "slug": "copyright",
-          "href": "/copyright"
+          "url": "https://grumpyoldrider.co.uk/copyright"
         },
         {
           "name": "Contact us",
           "slug": "request",
-          "href": "/faq/request"
+          "url": "https://grumpyoldrider.co.uk/faq/request"
         },
         {
           "name": "FAQs",
           "slug": "faq",
-          "href": "/faq"
+          "url": "https://grumpyoldrider.co.uk/faq"
         }
       ]
     },
@@ -83,32 +78,32 @@
         {
           "name": "About us",
           "slug": "about-us",
-          "href": "/about-us"
+          "url": "https://grumpyoldrider.co.uk/about-us"
         },
         {
           "name": "Privacy Policy",
           "slug": "privacy",
-          "href": "/privacy"
+          "url": "https://grumpyoldrider.co.uk/privacy"
         },
         {
           "name": "Terms & conditions",
           "slug": "terms",
-          "href": "/terms"
+          "url": "https://grumpyoldrider.co.uk/terms"
         },
         {
           "name": "Copyright & trademark policy",
           "slug": "copyright",
-          "href": "/copyright"
+          "url": "https://grumpyoldrider.co.uk/copyright"
         },
         {
           "name": "Contact us",
           "slug": "request",
-          "href": "/faq/request"
+          "url": "https://grumpyoldrider.co.uk/faq/request"
         },
         {
           "name": "FAQs",
           "slug": "faq",
-          "href": "/faq"
+          "url": "https://grumpyoldrider.co.uk/faq"
         }
       ]
     },
@@ -118,22 +113,22 @@
         {
           "name": "About us",
           "slug": "about-us",
-          "href": "/about-us"
+          "url": "https://grumpyoldrider.co.uk/about-us"
         },
         {
           "name": "Privacy Policy",
           "slug": "privacy",
-          "href": "/privacy"
+          "url": "https://grumpyoldrider.co.uk/privacy"
         },
         {
           "name": "Terms & conditions",
           "slug": "terms",
-          "href": "/terms"
+          "url": "https://grumpyoldrider.co.uk/terms"
         },
         {
           "name": "Copyright & trademark policy",
           "slug": "copyright",
-          "href": "/copyright"
+          "url": "https://grumpyoldrider.co.uk/copyright"
         }
       ]
     },
@@ -143,22 +138,22 @@
         {
           "name": "About us",
           "slug": "about-us",
-          "href": "/about-us"
+          "url": "https://grumpyoldrider.co.uk/about-us"
         },
         {
           "name": "Privacy Policy",
           "slug": "privacy",
-          "href": "/privacy"
+          "url": "https://grumpyoldrider.co.uk/privacy"
         },
         {
           "name": "Terms & conditions",
           "slug": "terms",
-          "href": "/terms"
+          "url": "https://grumpyoldrider.co.uk/terms"
         },
         {
           "name": "Copyright & trademark policy",
           "slug": "copyright",
-          "href": "/copyright"
+          "url": "https://grumpyoldrider.co.uk/copyright"
         }
       ]
     },
@@ -168,22 +163,22 @@
         {
           "name": "About us",
           "slug": "about-us",
-          "href": "/about-us"
+          "url": "https://grumpyoldrider.co.uk/about-us"
         },
         {
           "name": "Privacy Policy",
           "slug": "privacy",
-          "href": "/privacy"
+          "url": "https://grumpyoldrider.co.uk/privacy"
         },
         {
           "name": "Terms & conditions",
           "slug": "terms",
-          "href": "/terms"
+          "url": "https://grumpyoldrider.co.uk/terms"
         },
         {
           "name": "Copyright & trademark policy",
           "slug": "copyright",
-          "href": "/copyright"
+          "url": "https://grumpyoldrider.co.uk/copyright"
         }
       ]
     },
@@ -193,12 +188,12 @@
         {
           "name": "Contact us",
           "slug": "request",
-          "href": "/faq/request"
+          "url": "https://grumpyoldrider.co.uk/faq/request"
         },
         {
           "name": "FAQs",
           "slug": "faq",
-          "href": "/faq"
+          "url": "https://grumpyoldrider.co.uk/faq"
         }
       ]
     },
@@ -208,12 +203,12 @@
         {
           "name": "Contact us",
           "slug": "request",
-          "href": "/faq/request"
+          "url": "https://grumpyoldrider.co.uk/faq/request"
         },
         {
           "name": "FAQs",
           "slug": "faq",
-          "href": "/faq"
+          "url": "https://grumpyoldrider.co.uk/faq"
         }
       ]
     },
@@ -223,12 +218,12 @@
         {
           "name": "Contact us",
           "slug": "request",
-          "href": "/faq/request"
+          "url": "https://grumpyoldrider.co.uk/faq/request"
         },
         {
           "name": "FAQs",
           "slug": "faq",
-          "href": "/faq"
+          "url": "https://grumpyoldrider.co.uk/faq"
         }
       ]
     }
