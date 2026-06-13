@@ -3,28 +3,8 @@ on:
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
-  setup:
+  scrape_and_download:
     runs-on: ubuntu-latest
-    outputs:
-      chunks: ${{ steps.set-chunks.outputs.chunks }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Calculate chunks
-        id: set-chunks
-        run: |
-          LENGTH=$(jq '. | length' output/store_manifest.json)
-          CHUNKS=$(( (LENGTH + 9) / 10 ))
-          ARRAY=$(node -e "console.log(JSON.stringify(Array.from({length: $CHUNKS}, (_, i) => i)))")
-          echo "chunks=$ARRAY" >> $GITHUB_OUTPUT
-
-  scrape:
-    needs: setup
-    runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 3
-      matrix:
-        chunk: ${{ fromJson(needs.setup.outputs.chunks) }}
-      fail-fast: false
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -32,25 +12,38 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
           
       - name: Install Dependencies
         run: |
           npm install
           npx playwright install --with-deps chromium
           
-      - name: Run Extraction Swarm (Chunk ${{ matrix.chunk }})
+      - name: Run Phase 4 (Metadata Extraction)
         env:
-          CHUNK_INDEX: ${{ matrix.chunk }}
+          R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
+        run: node 4_extract_metadata.js
+        
+      - name: Run Verification Bridge
+        env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
-          R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
-        run: node parallel_swarm.js
+        run: node verify_parity.js
         
-      - name: Upload Chunk Manifest
+      - name: Run Phase 5 (Mockup Download)
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+        run: node 5_download_mockups.js
+        
+      - name: Upload Manifest Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: full-store-extraction-chunk-${{ matrix.chunk }}
-          path: output/parallel_swarm_manifest.json
+          name: full-store-manifest
+          path: |
+            output/parallel_swarm_manifest.json
+            output/301_image_redirect_map.json
