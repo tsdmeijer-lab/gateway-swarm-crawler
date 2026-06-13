@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        chunk: [0, 1, 2, 3, 4]
+        chunk: [0, 1, 2]
       fail-fast: false
     steps:
       - name: Checkout Code
@@ -26,7 +26,7 @@ jobs:
       - name: Run Phase 4 (Metadata Extraction)
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
-        run: node 4_extract_metadata.js --chunk ${{ matrix.chunk }} --total-chunks 5
+        run: node 4_extract_metadata.js --chunk ${{ matrix.chunk }} --total-chunks 3
         
       - name: Run Verification Bridge
         env:
