@@ -20,7 +20,12 @@ async function extractPhase2() {
 
   const menusData = JSON.parse(fs.readFileSync(menusPath, 'utf-8'));
   const menus = Array.isArray(menusData) ? menusData : (menusData.headerMenu || []);
-  const targetUrl = 'https://grumpyoldrider.co.uk';
+  let targetUrl = process.env.STORE_URL || process.argv[2];
+  if (!targetUrl) {
+    console.error("❌ STORE_URL is missing! Please provide it via environment variable or argument.");
+    process.exit(1);
+  }
+  if (!targetUrl.startsWith('http')) targetUrl = 'https://' + targetUrl;
   
   const browser = await launchBrowser();
   const page = await browser.newPage();

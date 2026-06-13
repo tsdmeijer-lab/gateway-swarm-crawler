@@ -12,7 +12,12 @@ async function extractPhase1() {
 
   const browser = await launchBrowser();
   const page = await browser.newPage();
-  const targetUrl = 'https://grumpyoldrider.co.uk';
+  let targetUrl = process.env.STORE_URL || process.argv[2];
+  if (!targetUrl) {
+    console.error("❌ STORE_URL is missing! Please provide it via environment variable or argument.");
+    process.exit(1);
+  }
+  if (!targetUrl.startsWith('http')) targetUrl = 'https://' + targetUrl;
 
   try {
     console.log(`Navigating to ${targetUrl} ...`);

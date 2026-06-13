@@ -19,7 +19,11 @@ async function main() {
   const page = await browser.newPage();
 
   try {
-    let userInput = 'theoldgrumpyclub.com';
+    let userInput = process.env.STORE_URL || process.argv[2];
+    if (!userInput) {
+      console.error("❌ STORE_URL is missing! Please provide it via environment variable or argument.");
+      process.exit(1);
+    }
     let targetUrl = userInput;
     if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
       targetUrl = 'https://' + targetUrl;
