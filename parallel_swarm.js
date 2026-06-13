@@ -264,7 +264,6 @@ async function processCampaign(browser, campaignUrl, index) {
     await processNext();
   };
 
-  const initialWorkers = [];
   for (let i = 0; i < concurrencyLimit && i < CAMPAIGNS.length; i++) {
     initialWorkers.push(processNext());
   }
