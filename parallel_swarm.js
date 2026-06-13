@@ -153,15 +153,17 @@ async function processCampaign(browser, campaignUrl, index) {
           const idMatch = mockupUrl.match(/id:([a-zA-Z0-9]+)/);
           const legacyImageId = idMatch ? idMatch[1] : null;
 
-          const cleanDesign = designName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          const cleanStyle = target.style.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          const cleanColor = colorName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          
-          const modifier = campaignOrientation === 'BACK' ? 'back-printed-' : '';
-          const filename = `${cleanDesign}-${modifier}${cleanStyle}-${cleanColor}.webp`;
+          const cleanDesign = designName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+          const cleanStyle = target.style.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+          const cleanColor = colorName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
           
           const campaignHostname = new URL(campaignUrl).hostname;
           const storeSlug = campaignHostname.replace(/\./g, '_');
+          const storeBrand = campaignHostname.replace(/\.(com|co\.uk|org|net)$/, '').replace(/[^a-z0-9]+/g, '-');
+          
+          const modifier = campaignOrientation === 'BACK' ? 'back-printed-' : '';
+          const filename = `${cleanDesign}-${modifier}${cleanStyle}-${cleanColor}-${storeBrand}.webp`.replace(/--+/g, '-');
+
           const s3Key = `${storeSlug}/${filename}`;
           
           // Use Cloudflare r2.dev domain for public access
